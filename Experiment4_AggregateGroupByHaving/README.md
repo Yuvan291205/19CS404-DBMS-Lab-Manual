@@ -1,3 +1,6 @@
+## Name: Yuvan M
+## RegNo: 212223240188
+
 # Experiment 4: Aggregate Functions, Group By and Having Clause
 
 ## AIM
@@ -38,123 +41,156 @@ HAVING condition;
 
 **Question 1**
 --
--- Paste Question 1 here
+-- How many prescriptions were written by each doctor?
 
 ```sql
--- Paste your SQL code below for Question 1
+--SELECT DoctorID, COUNT(*)AS
+TotalPrescriptions
+FROM Prescriptions
+GROUP BY DoctorID;
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/6925daf6-3609-4b29-bcdd-4dfac43dc2b1)
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+-- How many patients are covered by each insurance company?
 
 ```sql
--- Paste your SQL code below for Question 2
+-- SELECT InsuranceCompany,
+COUNT ( DISTINCT PatientID )AS
+TotalPatients
+FROM Insurance
+GROUP BY InsuranceCompany;
 ```
 
 **Output:**
-
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/08de6838-55c5-478c-9e96-d80b65fb70b9)
 
 **Question 3**
 ---
--- Paste Question 3 here
+-- How many patients are there in each city?
 
 ```sql
--- Paste your SQL code below for Question 3
+-- SELECT Address, COUNT(*)AS
+TotalPatients
+FROM Patients
+GROUP BY Address;
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/a0a25d1c-7460-461c-b9fb-ff8fe10ed96e)
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+--Write a SQL query to find the minimum purchase amount.
 
 ```sql
--- Paste your SQL code below for Question 4
+-- SELECT MIN(purch_amt)AS
+MINIMUM
+FROM orders;
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/2bea4213-0321-4c67-bd35-8535c89128ff)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+-- Write a SQL query to return the total number of rows in the 'customer' table where the city is not Noida.
 
 ```sql
--- Paste your SQL code below for Question 5
+-- SELECT COUNT(*)AS 
+COUNT
+FROM customer
+WHERE city!='Noida';
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/a8665da0-56e2-4771-bb60-0e814b469831)
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+-- Write a SQL query to find the maximum purchase amount.
 
 ```sql
--- Paste your SQL code below for Question 6
+-- SELECT MAX (purch_amt)AS MAXIMUM
+FROM orders;
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/a49915a5-83bc-4ead-8ddb-c11e13109961)
 
 **Question 7**
 ---
--- Paste Question 7 here
+-- Write a SQL query to Calculate the average email length (in characters) for people who lives in Mumbai city
 
 ```sql
--- Paste your SQL code below for Question 7
+-- SELECT AVG(LENGTH(email))AS
+avg_email_length_below_30
+FROM customer
+WHERE city='Mumbai';
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/ba86fc59-5c13-4036-8df7-5b41a5ca5246)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+--Write the SQL query that achieves the grouping of data by age intervals using the expression (age/5)5, calculates the average age for each group, and excludes groups where the average age is not less than 24.
 
 ```sql
--- Paste your SQL code below for Question 8
+--SELECT
+  (age/5)*5 AS age_group ,
+   AVG(age)
+FROM customer1
+GROUP BY age_group 
+HAVING AVG(age)<24;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/e84a06fa-049a-48b5-8084-b60675836410)
 
-![Output8](output.png)
 
 **Question 9**
 ---
--- Paste Question 9 here
+-- Write the SQL query that achieves the selection of category and calculates the sum of the product of price and category ID as Revenue for each category from the "products" table, and includes only those products where the total revenue is greater than 25.
 
 ```sql
--- Paste your SQL code below for Question 9
+-- SELECT CATEGORY_ID, SUM(price*category_id) AS Revenue
+FROM products
+GROUP BY category_id
+HAVING SUM(price *category_id)>25;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/933fbf78-c97a-43ca-ad46-aba8c69d5031)
 
-![Output9](output.png)
 
 **Question 10**
 ---
--- Paste Question 10 here
+-- How many medical records are there for each patient?
 
 ```sql
--- Paste your SQL code below for Question 10
+-- select PatientID, count(RecordID) as 'TotalRecords'
+from MedicalRecords
+group by PatientID;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/686c0ab6-6c07-4ad0-8037-d13d65f1d199)
 
-![Output10](output.png)
 
 
 ## RESULT
