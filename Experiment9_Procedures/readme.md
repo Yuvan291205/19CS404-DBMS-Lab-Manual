@@ -59,9 +59,14 @@ Key Differences:
 - Inside the procedure, compute the square of the input number.
 - Use `DBMS_OUTPUT.PUT_LINE` to display the result.
 - Call the procedure with a number as input.
+### Program:
+![image](https://github.com/user-attachments/assets/38cbb4fb-77ec-4b75-b034-f024d3917b53)
 
 **Expected Output:**  
 Square of 6 is 36
+
+### Output:
+![image](https://github.com/user-attachments/assets/f7de8e73-94a3-41ba-bf01-3e103058b7ef)
 
 ---
 
@@ -74,8 +79,14 @@ Square of 6 is 36
 - Return the result using the `RETURN` statement.
 - Call the function using a `SELECT` statement or in an anonymous block.
 
+### Program
+![image](https://github.com/user-attachments/assets/0a7bed5d-1096-4c8e-ac34-d48f7bdf6f0d)
+
 **Expected Output:**  
 Factorial of 5 is 120
+
+### Output:
+![image](https://github.com/user-attachments/assets/ad3314bb-2cb1-4a39-9cce-fa4dbaea8d9e)
 
 ---
 
@@ -87,8 +98,13 @@ Factorial of 5 is 120
 - Use the `MOD` function to check if the number is divisible by 2.
 - Display whether it is Even or Odd using `DBMS_OUTPUT.PUT_LINE`.
 
+### Program:
+![image](https://github.com/user-attachments/assets/017f9782-197a-4cf4-b698-45fe8514e49e)
+
 **Expected Output:**  
 12 is Even
+### Output:
+![image](https://github.com/user-attachments/assets/2fbc24fc-016e-4055-9be3-f3c34f13f279)
 
 ---
 
@@ -101,8 +117,14 @@ Factorial of 5 is 120
 - Return the reversed number.
 - Call the function and display the output.
 
+### Program:
+![image](https://github.com/user-attachments/assets/84aace0d-de26-4b88-9058-9219d185923a)
+
 **Expected Output:**  
 Reversed number of 1234 is 4321
+
+### Output:
+![image](https://github.com/user-attachments/assets/716fa3aa-ee9f-4d3e-a41d-cfce693d0e05)
 
 ---
 
@@ -114,6 +136,9 @@ Reversed number of 1234 is 4321
 - Use a loop from 1 to 10 to multiply the input number.
 - Display the multiplication results using `DBMS_OUTPUT.PUT_LINE`.
 
+### Program:
+![image](https://github.com/user-attachments/assets/6d504db2-8fcc-4106-83ae-2f7726d10ec7)
+
 **Expected Output:**  
 Multiplication table of 5:  
 5 x 1 = 5  
@@ -121,6 +146,9 @@ Multiplication table of 5:
 5 x 3 = 15  
 ...  
 5 x 10 = 50
+
+### Output:
+![image](https://github.com/user-attachments/assets/e2f1b90b-237e-47ce-b2d2-8e4dd39f31c3)
 
 ## RESULT
 Thus, the PL/SQL programs using procedures and functions were written, compiled, and executed successfully.
